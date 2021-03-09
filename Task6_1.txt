@@ -1,0 +1,32 @@
+str0 = str("* 1 2 3")
+str1 = str("1 e e e")
+str2 = str("2 e e e")
+str3 = str("3 e e e")
+print(str0)
+print(str1)
+print(str2)
+print(str3)
+for k in range(1, 10):
+    position = input("Введите через пробел номера строки и столбца выбранной вами позиции (от единицы до трех): ")
+    i = int(list(position.split())[0])
+    j = int(list(position.split())[1])
+    cross_or_zero = input("Введите символ, который вы хотите поставить на позицию (крестик или нолик): ")
+    if i == 1:
+        L1 = list(str1.split())
+        L1[j] = cross_or_zero
+        str1 = str(" ".join(L1))
+    elif i == 2:
+        L2 = list(str2.split())
+        L2[j] = cross_or_zero
+        str2 = str(" ".join(L2))
+    elif i == 3:
+        L3 = list(str3.split())
+        L3[j] = cross_or_zero
+        str3 = str(" ".join(L3))
+    else:
+        print("Такого номера строки не существует.")
+    print(str0)
+    print(str1)
+    print(str2)
+    print(str3)
+print("Все позиции заполнены.")
